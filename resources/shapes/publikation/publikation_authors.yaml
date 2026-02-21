@@ -1,0 +1,52 @@
+id: https://example.org/
+name: publication
+prefixes:
+  anzsrc: http://fis.tu-chemnitz.de/ontology/anzsrc#
+  bibo: http://purl.org/ontology/bibo/
+  foaf: http://xmlns.com/foaf/0.1/
+  kdsf: http://kerndatensatz-forschung.de/owl/Basis#
+  obo: http://purl.obolibrary.org/obo/
+  ex: https://example.org/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  schema: http://schema.org/
+  tucfis: http://fis.tu-chemnitz.de/ontology/tucfis#
+  vcard: http://www.w3.org/2006/vcard/ns#
+  vivo: http://vivoweb.org/ontology/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+default_prefix: ex
+classes:
+  Publikation:
+    class_uri: kdsf:Publikation
+    slots:
+    - authors
+  PublicationAuthorMap:
+    class_uri: vivo:Authorship
+    slots:
+    - relationToAuthor
+  Person:
+    class_uri: foaf:Person
+    slots:
+    - authorLabel
+slots:
+  authors:
+    slot_uri: vivo:relatedBy
+    range: PublicationAuthorMap
+  relationToAuthor:
+    slot_uri: vivo:relates
+    range: Person
+  authorLabel:
+    slot_uri: rdfs:label
+types:
+  string:
+    base: str
+    uri: xsd:string
+  langString:
+    base: str
+    uri: rdf:langString
+  dateTime:
+    base: str
+    uri: xsd:dateTime
+  integer:
+    base: str
+    uri: xsd:integer

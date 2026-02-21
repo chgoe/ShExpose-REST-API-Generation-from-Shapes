@@ -1,0 +1,60 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX kdsf: <http://kerndatensatz-forschung.de/owl/Basis#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+
+
+
+
+
+
+
+
+
+<Book> CLOSED {
+    (  $<Book_tes> rdfs:label rdf:langString ? ;
+       rdf:type [ bibo:Book ] ?
+    )
+}
+
+<DateTimeValue> CLOSED {
+    (  $<DateTimeValue_tes> vivo:dateTime xsd:string ? ;
+       rdf:type [ vivo:DateTimeValue ] ?
+    )
+}
+
+<Person> CLOSED {
+    (  $<Person_tes> rdfs:label rdf:langString ? ;
+       rdf:type [ foaf:Person ] ?
+    )
+}
+
+<PublicationAuthorMap> CLOSED {
+    (  $<PublicationAuthorMap_tes> vivo:relates @<Person> ? ;
+       rdf:type [ vivo:Authorship ] ?
+    )
+}
+
+<Publikation> CLOSED {
+    (  $<Publikation_tes> (  vivo:dateTimeValue @<DateTimeValue> ? ;
+          vivo:hasPublicationVenue @<Book> ? ;
+          bibo:pageStart xsd:string ? ;
+          bibo:pageEnd xsd:string ? ;
+          bibo:numPages xsd:integer ? ;
+          bibo:isbn13 xsd:string ? ;
+          bibo:doi xsd:string ? ;
+          vivo:relatedBy @<PublicationAuthorMap> ?
+       ) ;
+       rdf:type [ kdsf:Publikation ] ?
+    )
+}
+
+
+
+start=@<Publikation>

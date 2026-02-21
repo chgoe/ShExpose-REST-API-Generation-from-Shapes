@@ -1,0 +1,38 @@
+{
+  "name": "ShExpose",
+  "version": "1.0.0",
+  "description": "ShExpose your RDF data via a REST API leveraging ShEx shapes.",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "tsx ./src/generateEndpoints.ts",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "prepare:shex": "ts-node src/prepareShex.ts"
+  },
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "@ldo/cli": "0.0.1-alpha.29",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/jsonld": "^1.5.13",
+    "@types/shexj": "^2.1.7",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@asteasolutions/zod-to-openapi": "^8.2.0",
+    "@ldo/ldo": "0.0.1-alpha.29",
+    "@types/glob": "^8.1.0",
+    "@types/js-yaml": "^4.0.9",
+    "express": "^4.21.1",
+    "glob": "^11.0.3",
+    "js-yaml": "^4.1.0",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.4"
+  },
+  "type": "module"
+}

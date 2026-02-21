@@ -1,0 +1,6 @@
+{
+  "http://purl.obolibrary.org/obo/ERO_0000044": "grossgeraete_inventoryNumber.shex",
+  "hatBetriebspersonal": "grossgeraete_hatBetriebspersonal.shex",
+  "http://www.w3.org/2000/01/rdf-schema#label": "grossgeraete_base.shex",
+  "equipmentFor": "grossgeraete_base.shex"
+}

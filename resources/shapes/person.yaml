@@ -1,0 +1,120 @@
+id: https://example.org/
+name: person
+prefixes:
+  anzsrc: http://fis.tu-chemnitz.de/ontology/anzsrc#
+  foaf: http://xmlns.com/foaf/0.1/
+  kdsf: http://kerndatensatz-forschung.de/owl/Basis#
+  obo: http://purl.obolibrary.org/obo/
+  ex: https://example.org/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  schema: http://schema.org/
+  tucfis: http://fis.tu-chemnitz.de/ontology/tucfis#
+  vcard: http://www.w3.org/2006/vcard/ns#
+  vivo: http://vivoweb.org/ontology/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+default_prefix: ex
+classes:
+  Person:
+    class_uri: foaf:Person
+    slots:
+      - hasContact
+      - RO_0001025
+      - relatedBy
+  Contact:
+    class_uri: vcard:Individual
+    slots:
+      - hasTelephone
+      - hasName
+      - hasEmail
+      - hasTitle
+      - hasAddress
+  Telephone:
+    class_uri: vcard:Telephone
+    slots:
+      - telephone
+  Name:
+    class_uri: vcard:Name
+    slots:
+      - familyName
+      - givenName
+  Email:
+    class_uri: vcard:Email
+    slots:
+      - email
+  Address:
+    class_uri: vcard:Address
+    slots:
+      - locality
+      - postalCode
+      - streetAddress
+  Title:
+    class_uri: vcard:Title
+    slots:
+      - title
+  Room:
+    class_uri: vivo:Room
+    slots:
+      - label
+  Position:
+    class_uri: vivo:Position
+    slots:
+      - label
+slots:
+  hasContact:
+    slot_uri: obo:ARG_2000028
+    range: Contact
+    required: 1
+  hasTelephone:
+    slot_uri: vcard:hasTelephone
+    range: Telephone
+  telephone:
+    slot_uri: vcard:telephone
+  hasName:
+    slot_uri: vcard:hasName
+    range: Name
+    required: 1
+  hasEmail:
+    slot_uri: vcard:hasEmail
+    range: Email
+    required: 1
+  hasTitle:
+    slot_uri: vcard:hasTitle
+    range: Title
+  hasAddress:
+    slot_uri: vcard:hasAddress
+    range: Address
+  familyName:
+    slot_uri: vcard:familyName
+  givenName:
+    slot_uri: vcard:givenName
+  email:
+    slot_uri: vcard:email
+  locality:
+    slot_uri: vcard:locality
+    range: langString
+  postalCode:
+    slot_uri: vcard:postalCode
+  streetAddress:
+    slot_uri: vcard:streetAddress
+  title:
+    slot_uri: vcard:title
+  label:
+    slot_uri: rdfs:label
+    range: langString
+  RO_0001025:
+    slot_uri: obo:RO_0001025
+    range: Room
+  relatedBy:
+    slot_uri: vivo:relatedBy
+    range: Position
+types:
+  string:
+    uri: xsd:string
+    base: str
+  langString:
+    uri: rdf:langString
+    base: str
+  anyURI:
+    uri: xsd:anyURI
+    base: str

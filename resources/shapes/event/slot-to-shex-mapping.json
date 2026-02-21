@@ -1,0 +1,8 @@
+{
+  "durationStart": "event_dateTimeIntervalStart.shex",
+  "durationEnd": "event_dateTimeIntervalEnd.shex",
+  "http://vivoweb.org/ontology/core#contactInformation": "event_contactInformation.shex",
+  "http://www.w3.org/2000/01/rdf-schema#label": "event_base.shex",
+  "http://vivoweb.org/ontology/core#description": "event_base.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasURL|http://www.w3.org/2006/vcard/ns#url": "event_base.shex"
+}

@@ -1,0 +1,12 @@
+app:
+  port: 3000
+
+rdf:
+  sparql_endpoint: http://localhost:3001/sparql
+  qlever_token: endpoint_1234567
+
+data:
+  base_uri: https://example.org/
+
+debug:
+  do_sparql_update: false

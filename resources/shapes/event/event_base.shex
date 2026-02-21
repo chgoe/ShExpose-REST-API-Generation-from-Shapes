@@ -1,0 +1,45 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+
+
+
+
+
+
+
+
+
+
+
+<ContactNode> CLOSED {
+    (  $<ContactNode_tes> vcard:hasURL @<URL> ? ;
+       rdf:type [ vcard:Individual ] ?
+    )
+}
+
+<Event> CLOSED {
+    (  $<Event_tes> (  rdfs:label xsd:string ? ;
+          vivo:description xsd:string ? ;
+          obo:ARG_2000028 @<ContactNode> ?
+       ) ;
+       rdf:type [ event:Event ] ?
+    )
+}
+
+<URL> CLOSED {
+    (  $<URL_tes> vcard:url xsd:anyURI ? ;
+       rdf:type [ vcard:URL ] ?
+    )
+}
+
+
+
+start=@<Event>

@@ -1,0 +1,9 @@
+config/config.yaml
+
+node_modules/
+src/node_modules/
+venv/
+.idea/
+.vscode/
+resources/ldo/
+config/config.yaml

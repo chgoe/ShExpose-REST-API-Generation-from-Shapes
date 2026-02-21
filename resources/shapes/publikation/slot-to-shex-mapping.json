@@ -1,0 +1,10 @@
+{
+  "http://vivoweb.org/ontology/core#dateTimeValue|http://vivoweb.org/ontology/core#dateTime": "publikation_publicationDate.shex",
+  "http://vivoweb.org/ontology/core#hasPublicationVenue|http://www.w3.org/2000/01/rdf-schema#label": "publikation_partOfSeries.shex",
+  "http://purl.org/ontology/bibo/pageStart": "publikation_pageStart.shex",
+  "http://purl.org/ontology/bibo/pageEnd": "publikation_pageEnd.shex",
+  "http://purl.org/ontology/bibo/numPages": "publikation_numPages.shex",
+  "http://purl.org/ontology/bibo/isbn13": "publikation_isbn13.shex",
+  "http://purl.org/ontology/bibo/doi": "publikation_doi.shex",
+  "authorLabel": "publikation_authors.shex"
+}

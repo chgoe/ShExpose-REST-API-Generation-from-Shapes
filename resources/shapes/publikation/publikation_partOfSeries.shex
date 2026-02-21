@@ -1,0 +1,33 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX kdsf: <http://kerndatensatz-forschung.de/owl/Basis#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+
+
+
+
+
+
+
+
+
+<Book> CLOSED {
+    (  $<Book_tes> rdfs:label rdf:langString ? ;
+       rdf:type [ bibo:Book ] ?
+    )
+}
+
+<Publikation> CLOSED {
+    (  $<Publikation_tes> vivo:hasPublicationVenue @<Book> ? ;
+       rdf:type [ kdsf:Publikation ] ?
+    )
+}
+
+
+
+start=@<Publikation>

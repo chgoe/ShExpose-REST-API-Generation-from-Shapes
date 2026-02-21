@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "typeRoots": ["./node_modules/@types"],
+    "resolveJsonModule": true,
+  },
+  "include": ["./src/**/*", "submodules/shex2sparql", "submodules/neoshex2sparql", "submodules/neoshex2sparql"]
+}

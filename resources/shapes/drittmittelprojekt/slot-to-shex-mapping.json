@@ -1,0 +1,9 @@
+{
+  "projectHead": "drittmittelprojekt_projectHead.shex",
+  "durationStart": "drittmittelprojekt_durationStart.shex",
+  "durationEnd": "drittmittelprojekt_durationEnd.shex",
+  "http://vivoweb.org/ontology/core#description": "drittmittelprojekt_description.shex",
+  "http://www.w3.org/2000/01/rdf-schema#label": "drittmittelprojekt_base.shex",
+  "partner": "drittmittelprojekt_base.shex",
+  "funder": "drittmittelprojekt_base.shex"
+}

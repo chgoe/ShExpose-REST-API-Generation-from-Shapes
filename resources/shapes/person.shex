@@ -1,0 +1,87 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+
+
+
+
+
+
+
+<Address> CLOSED {
+    (  $<Address_tes> (  vcard:locality rdf:langString ? ;
+          vcard:postalCode xsd:string ? ;
+          vcard:streetAddress xsd:string ?
+       ) ;
+       rdf:type [ vcard:Address ] ?
+    )
+}
+
+<Contact> CLOSED {
+    (  $<Contact_tes> (  vcard:hasTelephone @<Telephone> ? ;
+          vcard:hasName @<Name> ;
+          vcard:hasEmail @<Email> ;
+          vcard:hasTitle @<Title> ? ;
+          vcard:hasAddress @<Address> ?
+       ) ;
+       rdf:type [ vcard:Individual ] ?
+    )
+}
+
+<Email> CLOSED {
+    (  $<Email_tes> vcard:email xsd:string ? ;
+       rdf:type [ vcard:Email ] ?
+    )
+}
+
+<Name> CLOSED {
+    (  $<Name_tes> (  vcard:familyName xsd:string ? ;
+          vcard:givenName xsd:string ?
+       ) ;
+       rdf:type [ vcard:Name ] ?
+    )
+}
+
+<Person> CLOSED {
+    (  $<Person_tes> (  obo:ARG_2000028 @<Contact> ;
+          obo:RO_0001025 @<Room> ? ;
+          vivo:relatedBy @<Position> ?
+       ) ;
+       rdf:type [ foaf:Person ] ?
+    )
+}
+
+<Position> CLOSED {
+    (  $<Position_tes> rdfs:label rdf:langString ? ;
+       rdf:type [ vivo:Position ] ?
+    )
+}
+
+<Room> CLOSED {
+    (  $<Room_tes> rdfs:label rdf:langString ? ;
+       rdf:type [ vivo:Room ] ?
+    )
+}
+
+<Telephone> CLOSED {
+    (  $<Telephone_tes> vcard:telephone xsd:string ? ;
+       rdf:type [ vcard:Telephone ] ?
+    )
+}
+
+<Title> CLOSED {
+    (  $<Title_tes> vcard:title xsd:string ? ;
+       rdf:type [ vcard:Title ] ?
+    )
+}
+
+
+
+start=@<Person>

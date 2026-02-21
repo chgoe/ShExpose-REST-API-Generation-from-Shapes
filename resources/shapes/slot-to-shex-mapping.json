@@ -1,0 +1,47 @@
+{
+  "drittmittelprojekt": {
+    "projectHead": "drittmittelprojekt_projectHead.shex",
+    "durationStart": "drittmittelprojekt_durationStart.shex",
+    "durationEnd": "drittmittelprojekt_durationEnd.shex",
+    "http://vivoweb.org/ontology/core#description": "drittmittelprojekt_description.shex",
+    "http://www.w3.org/2000/01/rdf-schema#label": "drittmittelprojekt_base.shex",
+    "partner": "drittmittelprojekt_base.shex",
+    "funder": "drittmittelprojekt_base.shex"
+  },
+  "event": {
+    "durationStart": "event_dateTimeIntervalStart.shex",
+    "durationEnd": "event_dateTimeIntervalEnd.shex",
+    "http://vivoweb.org/ontology/core#contactInformation": "event_contactInformation.shex",
+    "http://www.w3.org/2000/01/rdf-schema#label": "event_base.shex",
+    "http://vivoweb.org/ontology/core#description": "event_base.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasURL|http://www.w3.org/2006/vcard/ns#url": "event_base.shex"
+  },
+  "grossgeraete": {
+    "http://purl.obolibrary.org/obo/ERO_0000044": "grossgeraete_inventoryNumber.shex",
+    "hatBetriebspersonal": "grossgeraete_hatBetriebspersonal.shex",
+    "http://www.w3.org/2000/01/rdf-schema#label": "grossgeraete_base.shex",
+    "equipmentFor": "grossgeraete_base.shex"
+  },
+  "person": {
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasTelephone|http://www.w3.org/2006/vcard/ns#telephone": "person_vcard_telephone.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasName|http://www.w3.org/2006/vcard/ns#familyName": "person_vcard.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasName|http://www.w3.org/2006/vcard/ns#givenName": "person_vcard.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasEmail|http://www.w3.org/2006/vcard/ns#email": "person_vcard.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasTitle|http://www.w3.org/2006/vcard/ns#title": "person_vcard.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasAddress|http://www.w3.org/2006/vcard/ns#locality": "person_vcard.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasAddress|http://www.w3.org/2006/vcard/ns#postalCode": "person_vcard.shex",
+    "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasAddress|http://www.w3.org/2006/vcard/ns#streetAddress": "person_vcard.shex",
+    "roomLabel": "person_rooms.shex",
+    "positionLabel": "person_positions.shex"
+  },
+  "publikation": {
+    "http://vivoweb.org/ontology/core#dateTimeValue|http://vivoweb.org/ontology/core#dateTime": "publikation_publicationDate.shex",
+    "http://vivoweb.org/ontology/core#hasPublicationVenue|http://www.w3.org/2000/01/rdf-schema#label": "publikation_partOfSeries.shex",
+    "http://purl.org/ontology/bibo/pageStart": "publikation_pageStart.shex",
+    "http://purl.org/ontology/bibo/pageEnd": "publikation_pageEnd.shex",
+    "http://purl.org/ontology/bibo/numPages": "publikation_numPages.shex",
+    "http://purl.org/ontology/bibo/isbn13": "publikation_isbn13.shex",
+    "http://purl.org/ontology/bibo/doi": "publikation_doi.shex",
+    "authorLabel": "publikation_authors.shex"
+  }
+}

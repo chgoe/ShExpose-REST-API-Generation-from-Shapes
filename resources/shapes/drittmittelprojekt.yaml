@@ -1,0 +1,99 @@
+id: https://example.org/
+name: drittmittelprojekt
+prefixes:
+  anzsrc: http://fis.tu-chemnitz.de/ontology/anzsrc#
+  foaf: http://xmlns.com/foaf/0.1/
+  kdsf: http://kerndatensatz-forschung.de/owl/Basis#
+  obo: http://purl.obolibrary.org/obo/
+  ex: https://example.org/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  schema: http://schema.org/
+  tucfis: http://fis.tu-chemnitz.de/ontology/tucfis#
+  vcard: http://www.w3.org/2006/vcard/ns#
+  vivo: http://vivoweb.org/ontology/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+default_prefix: ex
+classes:
+  Drittmittelprojekt:
+    class_uri: kdsf:Drittmittelprojekt
+    slots:
+      - projectHead
+      - duration
+      - description
+      - label
+      - partners
+      - funder
+  ResearcherRole:
+    class_uri: vivo:ResearcherRole
+    slots:
+      - relatedToPerson
+  Person:
+    class_uri: foaf:Person
+    slots:
+      - label
+  DateTimeInterval:
+    class_uri: vivo:DateTimeInterval
+    slots:
+      - start
+      - end
+  StartTime:
+    class_uri: vivo:DateTimeValue
+    slots:
+      - dateTime
+  EndTime:
+    class_uri: vivo:DateTimeValue
+    slots:
+      - dateTime
+  Funder:
+    class_uri: kdsf:Mittelgeber
+    slots:
+      - label
+  Partner:
+    class_uri: foaf:Organization
+    slots:
+      - label
+slots:
+  label:
+    slot_uri: rdfs:label
+    range: langString
+  projectHead:
+    slot_uri: obo:BFO_0000055
+    range: ResearcherRole
+  relatedToPerson:
+    slot_uri: obo:RO_0000052
+    range: Person
+  duration:
+    slot_uri: vivo:dateTimeInterval
+    range: DateTimeInterval
+  start:
+    slot_uri: vivo:start
+    range: StartTime
+  dateTime:
+    slot_uri: vivo:dateTime
+    range: dateTime
+  end:
+    slot_uri: vivo:end
+    range: EndTime
+  description:
+    slot_uri: vivo:description
+    range: langString
+  partners:
+    slot_uri: obo:RO_0000057
+    range: Partner
+  funder:
+    slot_uri: kdsf:hatMittelgeber
+    range: Funder
+types:
+  string:
+    base: str
+    uri: xsd:string
+  langString:
+    base: str
+    uri: rdf:langString
+  dateTime:
+    base: str
+    uri: xsd:dateTime
+  integer:
+    base: str
+    uri: xsd:integer

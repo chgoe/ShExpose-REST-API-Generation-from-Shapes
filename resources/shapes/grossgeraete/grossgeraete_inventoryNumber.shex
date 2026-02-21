@@ -1,0 +1,25 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX tucfis: <http://fis.tu-chemnitz.de/ontology/tucfis#>
+
+
+
+
+
+
+
+
+
+
+<Grossgeraete> CLOSED {
+    (  $<Grossgeraete_tes> obo:ERO_0000044 xsd:string ? ;
+       rdf:type [ tucfis:Grossgeraete ] ?
+    )
+}
+
+
+
+start=@<Grossgeraete>

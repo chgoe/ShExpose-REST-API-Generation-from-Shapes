@@ -1,0 +1,36 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+
+
+
+
+
+
+
+
+<Contact> CLOSED {
+    (  $<Contact_tes> vcard:hasTelephone @<Telephone> ? ;
+       rdf:type [ vcard:Individual ] ?
+    )
+}
+
+<Person> CLOSED {
+    (  $<Person_tes> obo:ARG_2000028 @<Contact> ;
+       rdf:type [ foaf:Person ] ?
+    )
+}
+
+<Telephone> CLOSED {
+    (  $<Telephone_tes> vcard:telephone xsd:string ? ;
+       rdf:type [ vcard:Telephone ] ?
+    )
+}
+
+
+
+start=@<Person>

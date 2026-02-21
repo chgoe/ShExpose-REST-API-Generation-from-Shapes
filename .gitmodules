@@ -1,0 +1,3 @@
+[submodule "submodules/shex2sparql"]
+	path = submodules/shex2sparql
+	url = git@github.com:chgoe/neoShEx2SPARQL.git

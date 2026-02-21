@@ -1,0 +1,58 @@
+# Configuration file for predicate path overwrites
+# Each mapping defines a custom name for a specific predicate path
+# Format: path (as array) -> custom name (as string)
+
+overwriteMappings:
+  - path:
+      - "http://vivoweb.org/ontology/core#dateTimeInterval"
+      - "http://vivoweb.org/ontology/core#start"
+      - "http://vivoweb.org/ontology/core#dateTime"
+    name: "durationStart"
+
+  - path:
+      - "http://vivoweb.org/ontology/core#dateTimeInterval"
+      - "http://vivoweb.org/ontology/core#end"
+      - "http://vivoweb.org/ontology/core#dateTime"
+    name: "durationEnd"
+
+  - path:
+      - http://purl.obolibrary.org/obo/BFO_0000055
+      - http://purl.obolibrary.org/obo/RO_0000052
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "projectHead"
+  
+  - path:
+      - http://kerndatensatz-forschung.de/owl/Basis#hatMittelgeber
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "funder"
+
+  - path:
+      - http://purl.obolibrary.org/obo/RO_0000057
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "partner"
+  
+  - path:
+      - http://vivoweb.org/ontology/core#equipmentFor
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "equipmentFor"
+  
+  - path:
+      - http://kerndatensatz-forschung.de/owl/Basis#hatBetriebspersonal
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "hatBetriebspersonal"
+  
+  - path:
+      - http://purl.obolibrary.org/obo/RO_0001025
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "roomLabel"
+  
+  - path:
+      - http://vivoweb.org/ontology/core#relatedBy
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "positionLabel"
+
+  - path:
+      - http://vivoweb.org/ontology/core#relatedBy
+      - http://vivoweb.org/ontology/core#relates
+      - http://www.w3.org/2000/01/rdf-schema#label
+    name: "authorLabel"

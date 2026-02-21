@@ -1,0 +1,37 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX kdsf: <http://kerndatensatz-forschung.de/owl/Basis#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+
+
+
+
+
+
+
+
+
+<DateTimeInterval> CLOSED {
+    (  $<DateTimeInterval_tes> vivo:start @<StartTime> ? ;
+       rdf:type [ vivo:DateTimeInterval ] ?
+    )
+}
+
+<Drittmittelprojekt> CLOSED {
+    (  $<Drittmittelprojekt_tes> vivo:dateTimeInterval @<DateTimeInterval> ? ;
+       rdf:type [ kdsf:Drittmittelprojekt ] ?
+    )
+}
+
+<StartTime> CLOSED {
+    (  $<StartTime_tes> vivo:dateTime xsd:dateTime ? ;
+       rdf:type [ vivo:DateTimeValue ] ?
+    )
+}
+
+
+
+start=@<Drittmittelprojekt>

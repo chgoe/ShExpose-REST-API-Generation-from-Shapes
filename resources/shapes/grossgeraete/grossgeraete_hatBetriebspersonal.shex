@@ -1,0 +1,33 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX kdsf: <http://kerndatensatz-forschung.de/owl/Basis#>
+PREFIX tucfis: <http://fis.tu-chemnitz.de/ontology/tucfis#>
+
+
+
+
+
+
+
+
+
+
+<Grossgeraete> CLOSED {
+    (  $<Grossgeraete_tes> kdsf:hatBetriebspersonal @<Person> ? ;
+       rdf:type [ tucfis:Grossgeraete ] ?
+    )
+}
+
+<Person> CLOSED {
+    (  $<Person_tes> rdfs:label xsd:string ? ;
+       rdf:type [ foaf:Person ] ?
+    )
+}
+
+
+
+start=@<Grossgeraete>

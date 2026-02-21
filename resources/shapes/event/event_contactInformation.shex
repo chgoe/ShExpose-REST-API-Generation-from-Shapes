@@ -1,0 +1,25 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+
+
+
+
+
+
+
+
+
+<Event> CLOSED {
+    (  $<Event_tes> vivo:contactInformation xsd:string ? ;
+       rdf:type [ event:Event ] ?
+    )
+}
+
+
+
+start=@<Event>

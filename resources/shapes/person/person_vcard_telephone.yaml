@@ -1,0 +1,53 @@
+id: https://example.org/
+name: person
+prefixes:
+  anzsrc: http://fis.tu-chemnitz.de/ontology/anzsrc#
+  foaf: http://xmlns.com/foaf/0.1/
+  kdsf: http://kerndatensatz-forschung.de/owl/Basis#
+  obo: http://purl.obolibrary.org/obo/
+  person: https://example.org/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  schema: http://schema.org/
+  tucfis: http://fis.tu-chemnitz.de/ontology/tucfis#
+  vcard: http://www.w3.org/2006/vcard/ns#
+  vivo: http://vivoweb.org/ontology/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+default_prefix: person
+
+classes:
+  Person:
+    class_uri: foaf:Person
+    slots:
+      - hasContact
+
+  Contact:
+    class_uri: vcard:Individual
+    slots:
+      - hasTelephone
+  Telephone:
+    class_uri: vcard:Telephone
+    slots:
+      - telephone
+
+slots:
+  hasContact:
+    slot_uri: obo:ARG_2000028
+    range: Contact
+    required: 1
+  hasTelephone:
+    slot_uri: vcard:hasTelephone
+    range: Telephone
+  telephone:
+    slot_uri: vcard:telephone
+
+types:
+  string:
+    uri: xsd:string
+    base: str
+  langString:
+    uri: rdf:langString
+    base: str
+  anyURI:
+    uri: xsd:anyURI
+    base: str

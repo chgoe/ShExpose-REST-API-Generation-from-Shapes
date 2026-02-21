@@ -1,0 +1,12 @@
+{
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasTelephone|http://www.w3.org/2006/vcard/ns#telephone": "person_vcard_telephone.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasName|http://www.w3.org/2006/vcard/ns#familyName": "person_vcard.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasName|http://www.w3.org/2006/vcard/ns#givenName": "person_vcard.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasEmail|http://www.w3.org/2006/vcard/ns#email": "person_vcard.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasTitle|http://www.w3.org/2006/vcard/ns#title": "person_vcard.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasAddress|http://www.w3.org/2006/vcard/ns#locality": "person_vcard.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasAddress|http://www.w3.org/2006/vcard/ns#postalCode": "person_vcard.shex",
+  "http://purl.obolibrary.org/obo/ARG_2000028|http://www.w3.org/2006/vcard/ns#hasAddress|http://www.w3.org/2006/vcard/ns#streetAddress": "person_vcard.shex",
+  "roomLabel": "person_rooms.shex",
+  "positionLabel": "person_positions.shex"
+}

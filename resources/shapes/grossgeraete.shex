@@ -1,0 +1,45 @@
+# metamodel_version: 1.7.0
+BASE <https://example.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX kdsf: <http://kerndatensatz-forschung.de/owl/Basis#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX tucfis: <http://fis.tu-chemnitz.de/ontology/tucfis#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+
+
+
+
+
+
+
+
+
+
+<Grossgeraete> CLOSED {
+    (  $<Grossgeraete_tes> (  obo:ERO_0000044 xsd:string ? ;
+          kdsf:hatBetriebspersonal @<Person> ? ;
+          rdfs:label rdf:langString ? ;
+          vivo:equipmentFor @<Struktureinheit> ?
+       ) ;
+       rdf:type [ tucfis:Grossgeraete ] ?
+    )
+}
+
+<Person> CLOSED {
+    (  $<Person_tes> rdfs:label rdf:langString ? ;
+       rdf:type [ foaf:Person ] ?
+    )
+}
+
+<Struktureinheit> CLOSED {
+    (  $<Struktureinheit_tes> rdfs:label rdf:langString ? ;
+       rdf:type [ tucfis:Struktureinheit ] ?
+    )
+}
+
+
+
+start=@<Grossgeraete>
